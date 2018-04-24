@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+	<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	<script type="text/javascript" src="script.js"></script>
+	<script>ons.platform.select('ios')</script>
+</head>
+<body>
+	
+	<ons-page>
+  		<ons-toolbar style="background-color: lightgray" >
+  		<div class="left">
+        <ons-toolbar-button onclick="fn.open()">
+          <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+     	</div>
+    	<div class="center" style="font-size: 30px">About</div>
+    	<div class="right">
+        <ons-toolbar-button icon="ion-ios-gear" onclick="showTemplateDialog()"></ons-toolbar-button>
+    	</div>
+  	</ons-toolbar>
+
+  	
+    <ons-tabbar swipeable position="auto">
+    	<ons-tab page="about.html" label="About" icon="ion-home, material:md-home" active>
+	    </ons-tab>
+    	<ons-tab page="barbro.html" label="Barbro" icon="ion-android-walk" active-icon="md-face">
+    	</ons-tab>
+	    <ons-tab page="tak.html" label="Tak" icon="ion-android-walk" active-icon="md-face">
+	    </ons-tab>
+	    <ons-tab page="neta.html" label="La Neta" icon="ion-android-walk" active-icon="md-face">
+	    </ons-tab>
+  </ons-tabbar>
+
+  	<ons-splitter>
+ 	<ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+    <ons-page>
+      <ons-list>
+      	<ons-list-item onclick="fn.load('about.html')" tappable>
+          About
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('barbro.html')" tappable>
+          Barbro
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('tak.html')" tappable>
+          Tak
+        </ons-list-item>
+        <ons-list-item onclick="fn.load('neta.html')" tappable>
+          La Neta
+        </ons-list-item>
+      </ons-list>
+    </ons-page>
+  	</ons-splitter-side>
+  	<ons-splitter-content id="content" page="about.html"></ons-splitter-content>
+	</ons-splitter>
+</ons-page>
+
+<template id="about.html">
+  <ons-page id="about">
+    <p>
+     	An app by Sebrik
+    </p>
+  </ons-page>
+</template>
+
+<template id="barbro.html">
+  <ons-page id="barbro">
+  <div class="pic">
+  <img src="img_02.png">
+  </div>
+    <p>
+      $$$	Asian Fusion, Barer, Bistros
+    </p>
+
+	<p>mån	17.00 - 22.30</p>
+	<p>tis	17.00 - 22.30</p>
+	<p>ons	17.00 - 22.30</p>
+	<p>tor 17.00 - 22.30</p>
+	<p>fre	17.00 - 00.00</p>
+	<p>lör	17.00 - 00.00</p>
+	<p>sön	17.00 - 22.30</p>
+	<h2>Mer info</h2>
+	<p>Tar emot bokningar <b>Ja</b></p>
+	<p>Utkörning <b>Nej</b></p>
+	<p>Takeaway <b>Ja</b></p>
+	<p>Tar betalkort <b>Ja</b></p>
+	<p>Bra för <b>Middag</b></p>
+	<p>Parkering <b>Gata</b></p>
+	<p>Cykelparkering <b>Ja</b></p>
+	<p>Bra för barn <b>Nej</b></p>
+	<p>Bra för stora grupper <b>Ja</b></p>
+	<p>Klädsel <b>Avslappnat</b></p>
+	<p>Atmosfär <b>Avslappnat, Trendigt</b></p>
+	<p>Ljudnivå <b>Genomsnitt</b></p>
+	<p>Alkohol <b>Spritdrycker, vin och öl</b></p>
+	<p>Uteservering <b>Ja</b></p>
+	<p>Wi-Fi <b>Gratis</b></p>
+	<p>Har TV <b>Nej</b></p>
+	<p>Catering <b>Nej</b></p>
+	<p>Har biljardbord <b>Nej</b></p>
+
+	<div class="btn">
+	<ons-button onclick="location.href='https://www.yelp.se/biz/barbro-stockholm'; ">LÄS MER</ons-button>
+	</div>
+	<ons-list>
+    <ons-list-item>
+      <div class="center">
+        Besökt
+      </div>
+      <div class="right">
+        <ons-switch></ons-switch>
+      </div>
+    </ons-list-item>
+    </ons-list>
+  	</ons-page>
+</template>
+
+<template id="tak.html">
+  <ons-page id="tak">
+  <div class="pic">
+  <img src="img_04.png">
+  </div>
+ 	<p>$$$$	Japansk mat, Coctailbarer, Skandinavisk mat</p>
+   	<p>mån	17.00 - 22.30</p>
+	<p>tis	17.00 - 22.30</p>
+	<p>ons	17.00 - 22.30</p>
+	<p>tor 17.00 - 22.30</p>
+	<p>fre	17.00 - 00.00</p>
+	<p>lör	17.00 - 00.00</p>
+	<p>sön	17.00 - 22.30</p>
+	<h2>Mer info</h2>
+	<p>Tar emot bokningar <b>Ja</b></p>
+	<p>Utkörning <b>Nej</b></p>
+	<p>Takeaway <b>Nej</b></p>
+	<p>Tar betalkort <b>Ja</b></p>
+	<p>Cykelparkering <b>Ja</b></p>
+	<p>Bra för barn <b>Nej</b></p>
+	<p>Bra för stora grupper <b>Ja</b></p>	
+	<p>Klädsel <b>Avslappnat</b></p>
+	<p>Alkohol <b>Endast öl och vin</b></p>
+	<p>Uteservering <b>Ja</b></p>
+	<p>Wi-Fi <b>Gratis</b></p>
+	<p>Har TV <b>Nej</b></p>
+
+	<div class="btn">
+	<ons-button onclick="location.href='https://www.yelp.se/biz/tak-stockholm';">LÄS MER</ons-button>
+	</div>
+	<ons-list>
+    <ons-list-item>
+      <div class="center">
+        Besökt
+      </div>
+      <div class="right">
+        <ons-switch></ons-switch>
+      </div>
+    </ons-list-item>
+    </ons-list>
+  </ons-page>
+</template>
+
+<template id="neta.html">
+  <ons-page id="neta">
+  <div class="pic">
+  <img src="img_03.png">
+  </div>
+ 	<p>$	Mexikansk mat</p>
+   	<p>mån	17.00 - 22.30</p>
+	<p>tis	17.00 - 22.30</p>
+	<p>ons	17.00 - 22.30</p>
+	<p>tor 17.00 - 22.30</p>
+	<p>fre	17.00 - 00.00</p>
+	<p>lör	17.00 - 00.00</p>
+	<p>sön	17.00 - 22.30</p>
+	<h2>Mer info</h2>
+	<p>Tar emot bokningar <b>Nej</b></p>
+	<p>Utkörning <b>Nej</b></p>
+	<p>Takeaway <b>Ja</b></p>
+	<p>Tar betalkort <b>Ja</b></p>
+	<p>Bra för <b>Lunch</b></p>
+	<p>Parkering <b>Gata </b></p>
+	<p>Cykelparkering <b>Ja</b></p>
+	<p>Bra för barn <b>Ja</b></p>
+	<p>Bra för stora grupper <b>Ja</b></p>
+	<p>Klädsel <b>Avslappnat</b></p>
+	<p>Atmosfär <b>Avslappnat</b></p>
+	<p>Ljudnivå <b>Genomsnitt</b></p>
+	<p>Alkohol <b>Endast öl och vin</b></p>
+	<p>Uteservering <b>Ja</b></p>
+	<p>Wi-Fi <b>Nej</b></p>
+	<p>Har TV <b>Nej</b></p>
+	<p>Catering <b>Ja</b></p>
+
+	<div class="btn">
+	<ons-button onclick="location.href='https://www.yelp.se/biz/la-neta-stockholm';">LÄS MER</ons-button>
+	</div>
+
+	<ons-list>
+    <ons-list-item>
+      <div class="center">
+        Besökt
+      </div>
+      <div class="right">
+        <ons-switch></ons-switch>
+      </div>
+    </ons-list-item>
+    </ons-list>
+  </ons-page>
+</template>
+
+<template id="dialog.html">
+  <ons-dialog id="my-dialog">
+    <div style="text-align: center; padding: 10px;">
+      <p>
+        We don't like settings
+      </p>
+
+      <p>
+        <ons-button onclick="hideDialog('my-dialog')">Close</ons-button>
+      </p>
+    </div>
+  </ons-dialog>
+</template>
+
+
+</body>
+</html>
