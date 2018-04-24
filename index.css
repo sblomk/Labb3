@@ -21,3 +21,10 @@ a {
 .pic {
 	text-align: center;
 }
+.link {
+	background-color: green;
+}
+
+img {
+	width: 100%;
+}
