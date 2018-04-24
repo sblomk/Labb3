@@ -6,7 +6,7 @@
 	<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 	<script type="text/javascript" src="script.js"></script>
-	<script>ons.platform.select('ios')</script>
+	<script>ons.platform.select('android')</script>
 </head>
 <body>
 	
@@ -19,7 +19,7 @@
      	</div>
     	<div class="center" style="font-size: 30px">About</div>
     	<div class="right">
-        <ons-toolbar-button icon="ion-ios-gear" onclick="showTemplateDialog()" style="color: white"></ons-toolbar-button>
+        <ons-toolbar-button icon="ion-ios-heart" onclick="showTemplateDialog()" style="color: white"></ons-toolbar-button>
     	</div>
   	</ons-toolbar>
 
@@ -84,13 +84,14 @@
 	<div class="btn">
 	<ons-button class="link" onclick="location.href='https://www.yelp.se/biz/barbro-stockholm'; ">LÄS MER</ons-button>
 	</div>
+
 	<ons-list>
     <ons-list-item>
       <div class="center">
-        Besökt
+        Favorit
       </div>
       <div class="right">
-        <ons-switch onclick="ons.notification.toast('Barbro tillagd i besökta!', { timeout: 1000, animation: 'fall' })"></ons-switch>
+        <ons-switch onclick="ons.notification.toast('Barbro tillagd i favoriter!', { timeout: 2000, animation: 'fall' })"></ons-switch>
       </div>
     </ons-list-item>
     </ons-list>
@@ -130,10 +131,10 @@
 	<ons-list>
     <ons-list-item>
       <div class="center">
-        Besökt
+        Favorit
       </div>
       <div class="right">
-        <ons-switch onclick="ons.notification.toast('Tak tillagd i besökta!', { timeout: 1000, animation: 'fall' })"></ons-switch>
+        <ons-switch onclick="ons.notification.toast('Tak tillagd i favoriter!', { timeout: 1000, animation: 'fall' })"></ons-switch>
       </div>
     </ons-list-item>
     </ons-list>
@@ -179,10 +180,10 @@
 	<ons-list>
     <ons-list-item>
       <div class="center">
-        Besökt
+        Favorit
       </div>
       <div class="right">
-        <ons-switch onclick="ons.notification.toast('La Neta tillagd i besökta!', { timeout: 1000, animation: 'fall' })"></ons-switch>
+        <ons-switch onclick="ons.notification.toast('La Neta tillagd i favoriter!', { timeout: 1000, animation: 'fall' })"></ons-switch>
       </div>
     </ons-list-item>
     </ons-list>
@@ -193,11 +194,13 @@
   <ons-dialog id="my-dialog">
     <div style="text-align: center; padding: 10px;">
       <p>
-        We don't like settings
+        Favoriter:<br><br>
+        TAK<br>
+        Barbro<br>
       </p>
 
       <p>
-        <ons-button onclick="hideDialog('my-dialog')">Close</ons-button>
+        <ons-button onclick="hideDialog('my-dialog')">Stäng</ons-button>
       </p>
     </div>
   </ons-dialog>
