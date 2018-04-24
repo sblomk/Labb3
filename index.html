@@ -11,15 +11,15 @@
 <body>
 	
 	<ons-page>
-  		<ons-toolbar style="background-color: lightgray" >
+  		<ons-toolbar style="background-color: #f44336" >
   		<div class="left">
-        <ons-toolbar-button onclick="fn.open()">
-          <ons-icon icon="md-menu"></ons-icon>
+        <ons-toolbar-button>
+          <ons-icon icon="md-menu" style="color: white"></ons-icon>
         </ons-toolbar-button>
      	</div>
     	<div class="center" style="font-size: 30px">About</div>
     	<div class="right">
-        <ons-toolbar-button icon="ion-ios-gear" onclick="showTemplateDialog()"></ons-toolbar-button>
+        <ons-toolbar-button icon="ion-ios-gear" onclick="showTemplateDialog()" style="color: white"></ons-toolbar-button>
     	</div>
   	</ons-toolbar>
 
@@ -27,41 +27,20 @@
     <ons-tabbar swipeable position="auto">
     	<ons-tab page="about.html" label="About" icon="ion-home, material:md-home" active>
 	    </ons-tab>
-    	<ons-tab page="barbro.html" label="Barbro" icon="ion-android-walk" active-icon="md-face">
+    	<ons-tab page="barbro.html" label="Barbro" icon="ion-pizza" active-icon="md-face">
     	</ons-tab>
-	    <ons-tab page="tak.html" label="Tak" icon="ion-android-walk" active-icon="md-face">
+	    <ons-tab page="tak.html" label="Tak" icon="ion-wineglass" active-icon="md-face">
 	    </ons-tab>
-	    <ons-tab page="neta.html" label="La Neta" icon="ion-android-walk" active-icon="md-face">
+	    <ons-tab page="neta.html" label="La Neta" icon="ion-icecream" active-icon="md-face">
 	    </ons-tab>
   </ons-tabbar>
-
-  	<ons-splitter>
- 	<ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
-    <ons-page>
-      <ons-list>
-      	<ons-list-item onclick="fn.load('about.html')" tappable>
-          About
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('barbro.html')" tappable>
-          Barbro
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('tak.html')" tappable>
-          Tak
-        </ons-list-item>
-        <ons-list-item onclick="fn.load('neta.html')" tappable>
-          La Neta
-        </ons-list-item>
-      </ons-list>
-    </ons-page>
-  	</ons-splitter-side>
-  	<ons-splitter-content id="content" page="about.html"></ons-splitter-content>
-	</ons-splitter>
-</ons-page>
 
 <template id="about.html">
   <ons-page id="about">
     <p>
-     	An app by Sebrik
+    	Explore different restaurants<br>
+    	in Stockholm.
+     	<br><br>An app made by Sebrik.
     </p>
   </ons-page>
 </template>
@@ -111,7 +90,7 @@
         Besökt
       </div>
       <div class="right">
-        <ons-switch></ons-switch>
+        <ons-switch onclick="ons.notification.toast('Barbro tillagd i besökta!', { timeout: 1000, animation: 'fall' })"></ons-switch>
       </div>
     </ons-list-item>
     </ons-list>
@@ -154,7 +133,7 @@
         Besökt
       </div>
       <div class="right">
-        <ons-switch></ons-switch>
+        <ons-switch onclick="ons.notification.toast('Tak tillagd i besökta!', { timeout: 1000, animation: 'fall' })"></ons-switch>
       </div>
     </ons-list-item>
     </ons-list>
@@ -203,7 +182,7 @@
         Besökt
       </div>
       <div class="right">
-        <ons-switch></ons-switch>
+        <ons-switch onclick="ons.notification.toast('La Neta tillagd i besökta!', { timeout: 1000, animation: 'fall' })"></ons-switch>
       </div>
     </ons-list-item>
     </ons-list>
