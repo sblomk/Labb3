@@ -200,7 +200,7 @@
       </p>
 
       <p>
-        <ons-button onclick="hideDialog('my-dialog')">Stäng</ons-button>
+        <ons-button onclick="hideDialog('my-dialog')">Close</ons-button>
       </p>
     </div>
   </ons-dialog>
@@ -214,7 +214,8 @@
       </p>
 
       <p>
-        <ons-button onclick="hideDialogShare('share')">Stäng</ons-button>
+      	<ons-button>Share</ons-button>
+        <ons-button onclick="hideDialogShare('share')">Close</ons-button>
       </p>
     </div>
   </ons-dialog>
@@ -222,7 +223,7 @@
 
   <ons-speed-dial position="bottom right" direction="up">
     <ons-fab>
-      <ons-icon icon="md-share" onclick="showTemplateDialogShare()"></ons-icon>
+      <ons-icon icon="md-share"></ons-icon>
     </ons-fab>
     <ons-speed-dial-item>
       <ons-icon icon="md-twitter" onclick="showTemplateDialogShare()"></ons-icon>
