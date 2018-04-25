@@ -206,6 +206,34 @@
   </ons-dialog>
 </template>
 
+<template id="share.html">
+  <ons-dialog id="share">
+    <div style="text-align: center; padding: 10px;">
+      <p>
+        Share this in this site!
+      </p>
+
+      <p>
+        <ons-button onclick="hideDialogShare('share')">Stäng</ons-button>
+      </p>
+    </div>
+  </ons-dialog>
+</template>
+
+  <ons-speed-dial position="bottom right" direction="up">
+    <ons-fab>
+      <ons-icon icon="md-share" onclick="showTemplateDialogShare()"></ons-icon>
+    </ons-fab>
+    <ons-speed-dial-item>
+      <ons-icon icon="md-twitter" onclick="showTemplateDialogShare()"></ons-icon>
+    </ons-speed-dial-item>
+    <ons-speed-dial-item>
+      <ons-icon icon="md-facebook" onclick="showTemplateDialogShare()"></ons-icon>
+    </ons-speed-dial-item>
+    <ons-speed-dial-item>
+      <ons-icon icon="md-google-plus" onclick="showTemplateDialogShare()"></ons-icon>
+    </ons-speed-dial-item>
+  </ons-speed-dial>
 
 </body>
 </html>
